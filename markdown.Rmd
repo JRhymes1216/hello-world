@@ -1,0 +1,21 @@
+---
+title: "Github Markdown Assignment"
+output: html_document
+---
+
+
+
+```{r, echo=FALSE, messages=FALSE, results='hide'}
+library(ISLR)
+library(MASS) ## a library of example datasets
+library(ggplot2)
+library(dplyr)
+
+attach(Weekly)
+Weekly %>%
+  ggplot( aes(x=Lag1)) +
+  geom_density(fill="#69b3a2", color="#e9ecef", alpha=0.8) +
+  ggtitle("Density of Lag1")
+
+```
+
